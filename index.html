@@ -14,12 +14,34 @@
         body {
             background-color: #f4517c;
         }
+
+        .menucontentwidth {
+            width: 50%;
+        }
+
+        .scrollmargin {
+            scroll-margin-top: 100px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .menucontentwidth {
+                width: 90%;
+            }
+
+            .scrollmargin {
+                scroll-margin-top: 24px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="flex justify-between px-3 md:px-0 md:justify-evenly items-center text-white gap-[10px]" style="position: sticky;background-color: inherit;top: 0;">
-        <img src="imgs/logo.jpg" alt="" style="width: 90px;">
+    <div class="flex justify-center">
+        <img src="imgs/logo.jpg" alt="sweet scoop" style="width: 100px;" class="block md:hidden">
+    </div>
+    <div class="flex justify-between px-3 md:px-0 md:justify-evenly items-center text-white gap-[10px]"
+        style="position: sticky;background-color: inherit;top: 0;">
+        <img src="imgs/logo.jpg" alt="sweet scoop" style="width: 90px;" class="hidden md:block">
         <a class="sm:text-xs md:text-xl" href="#cones">Cones</a>
         <a class="sm:text-xs md:text-xl" href="#sundae">Sundae</a>
         <a class="sm:text-xs md:text-xl" href="#icybrownie">Icy brownie</a>
@@ -28,11 +50,11 @@
     </div>
     <div class="p-4 m-auto text-center flex flex-col gap-4 my-5"
         style="background-color: white; color:#f4517c;width: 80%;">
-        <div id="cones" style="scroll-margin-top: 100px;">
+        <div id="cones" class="scrollmargin">
             <span class="text-2xl font-semibold">Cones</span>
             <div class="flex text-lg justify-center">
-                <div class="flex flex-col" style="width: 25%;">
-                    <div class="flex flex-start justify-between">
+                <div class="flex flex-col menucontentwidth">
+                    <div class="flex flex-start justify-between ">
                         <span>
                             1 scoop
                         </span>
@@ -57,10 +79,10 @@
 
             </div>
         </div>
-        <div id="sundae" style="scroll-margin-top: 100px;">
+        <div id="sundae" class="scrollmargin">
             <span class="text-2xl font-semibold" id="">Sundae</span>
             <div class="flex text-lg justify-center">
-                <div class="flex flex-col gap-4" style="width: 25%;">
+                <div class="flex flex-col gap-4 menucontentwidth">
                     <div class="flex flex-start justify-between">
                         <span class="flex flex-col items-start">
                             <span>
@@ -103,10 +125,10 @@
                 </div>
             </div>
         </div>
-        <div id="icybrownie" style="scroll-margin-top: 100px;">
+        <div id="icybrownie" class="scrollmargin">
             <span class="text-2xl font-semibold" id="icybrownie">Icy brownie</span>
             <div class="flex text-lg justify-center">
-                <div class="flex flex-col gap-4" style="width: 25%;">
+                <div class="flex flex-col gap-4 menucontentwidth">
                     <div class="flex flex-start justify-between">
                         <span class="flex flex-col items-start text-left">
                             <span>
@@ -124,10 +146,10 @@
                 </div>
             </div>
         </div>
-        <div id="shaky" style="scroll-margin-top: 100px;">
+        <div id="shaky" class="scrollmargin">
             <span class="text-2xl font-semibold" id="shaky">Shaky</span>
             <div class="flex text-lg justify-center">
-                <div class="flex flex-col gap-1" style="width: 25%;">
+                <div class="flex flex-col gap-1 menucontentwidth">
                     <div class="flex flex-start justify-between">
                         <span>
                             Lemon mint
@@ -189,10 +211,10 @@
 
             </div>
         </div>
-        <div id="cookiesandwich" style="scroll-margin-top: 100px;">
+        <div id="cookiesandwich" class="scrollmargin">
             <span class="text-2xl font-semibold" id="cookiesandwich">Cookie sandwich</span>
             <div class="flex text-lg justify-center">
-                <div class="flex flex-col gap-4" style="width: 25%;">
+                <div class="flex flex-col gap-4 menucontentwidth">
                     <div class="flex flex-start justify-between">
                         <span class="flex flex-col items-start text-left">
                             <span>
