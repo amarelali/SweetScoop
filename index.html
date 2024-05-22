@@ -52,6 +52,7 @@
             position: absolute;
             z-index: 1;
             opacity: 60%;
+            top: 10px;
             left: 10px;
             height: fit-content;
         }
@@ -59,7 +60,7 @@
 </head>
 
 <body class="relative">
-    <span class="flex gap-1 items-center p-2 " id="status">
+    <span class="flex gap-1 items-center sm:text-sm p-2 " id="status">
         <?xml version="1.0" ?>
         <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
         <svg height="8.829px" id="Capa_1" style="enable-background:new 0 0 8.829 8.829;" version="1.1"
@@ -380,14 +381,16 @@
 
         </div>
     </footer>
-
+    <div class="sm:text-xs text-center py-2" style="color:#f4517c;background-color: white;">
+        Copyright ©2024 All rights reserved | Made with ♥ by <a href="https://amarelali.github.io/amarelali-portfolio/" target="_blank" class="underline">Amar El Ali</a>
+    </div>
     <script>
         document.addEventListener("scroll", (event) => {
             var statusElement = document.getElementById("status");
             if (window.scrollY > 42) {
                 statusElement.style.bottom = '10px';
                 statusElement.style.position = 'fixed';
-                statusElement.style.top = '';  // Reset top to avoid conflicts
+                statusElement.style.top = 'unset';  // Reset top to avoid conflicts
             } else {
                 statusElement.style.top = '10px';
                 statusElement.style.position = 'absolute';  // Reset position to default
